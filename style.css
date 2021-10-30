@@ -8,10 +8,11 @@
     :root {
         --clr-light: #fafafa;
         --clr-dark: #161616;
-        /* --clr-primary: null;
-      --clr-secondary: null;
-      --clr-accent: null;
-      */
+
+        --clr-primary: #fbb040;
+        --clr-secondary: #c3a08f;
+        --clr-accent: null;
+
         --foreground: var(--clr-dark);
         --background: var(--clr-light);
     }
@@ -21,10 +22,11 @@
     :root {
         --clr-light: #fafafa;
         --clr-dark: #161616;
-        /*--clr-primary: null;
-      --clr-secondary: null;
-      --clr-accent: null;
-      */
+
+        --clr-primary: #fbb040;
+        --clr-secondary: #cd853f;
+        --clr-accent: null;
+
         --foreground: var(--clr-light);
         --background: var(--clr-dark);
     }
@@ -36,15 +38,71 @@ body {
 
 .header {
     font-family: sans-serif;
-    font-size: 24px;
+    font-size: 2em;
     text-align: center;
     width: 100%;
-    background-color: #000a;
+    background-color: var(--clr-primary);
 }
 
 .header h1 {
-    color: var(--clr-light);
+    color: var(--clr-dark);
     padding: 10px;
     width: max-content;
     margin: auto;
+}
+
+.clicker {
+    text-align: center;
+    font-family: sans-serif;
+    width: 50%;
+    margin: auto;
+    background-color: var(--clr-secondary);
+    height: calc(100vh - 94px);
+    padding-top: 5vh;
+}
+
+.stats {
+    background-image: linear-gradient(to right, #0000, #6666, #0000);
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+}
+
+.bps {
+    font-size: 0.66em;
+}
+
+.clicking {
+    background-image: radial-gradient(circle, #fffa, #0000 50%);
+    margin-top: 10%;
+}
+
+.click-battery {
+    width: 30%;
+    margin: auto;
+    transition: 300ms;
+}
+
+.click-battery:hover {
+    width: 31%;
+}
+
+@media (max-width: 768px) {
+    .header {
+        font-size: 1em;
+    }
+    .stats {
+        font-size: 1.25em;
+    }
+    .click-battery {
+        width: 50%;
+        margin-bottom: 20%;
+    }
+    .click-battery:hover {
+        width: 52%;
+    }
+    .clicker {
+        width: 100%;
+        height: min-content;
+    }
 }
