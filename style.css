@@ -92,6 +92,15 @@ body {
     left: 35vw;
     top: calc(94px + 5vh);
     height: 40vw;
+    background-image: radial-gradient(#fffa, #0000 50%);
+    transition: 300ms;
+}
+
+.clicking:active {
+    width: 29%;
+}
+
+.clicking:active::before {
     background-image: radial-gradient(#fffa, #0000 70%);
 }
 
@@ -118,12 +127,4 @@ body {
         width: 100%;
         height: min-content;
     }
-}
-
-button {
-    display: block;
-    margin: auto;
-    width: 100px;
-    height: 100px;
-    font-size: 24px;
 }
