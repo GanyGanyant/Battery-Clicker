@@ -6,7 +6,7 @@ var batStat = document.getElementById("Batteries");
 var bpsStat = document.getElementById("bps");
 
 
-function click() {
+function clicking() {
   batteries += mutliplier;
   updateStats();
   return null;
