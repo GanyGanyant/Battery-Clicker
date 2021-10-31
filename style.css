@@ -73,18 +73,31 @@ body {
 }
 
 .clicking {
-    background-image: radial-gradient(circle, #fffa, #0000 50%);
+    /*background-image: radial-gradient(circle, #fffa, #0000 55%);*/
     margin-top: 10%;
-}
-
-.click-battery {
     width: 30%;
     margin: auto;
     transition: 300ms;
 }
 
-.click-battery:hover {
+.clicking:hover {
     width: 31%;
+}
+
+.clicking:hover::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30vw;
+    left: 35vw;
+    top: calc(94px + 5vh);
+    height: 40vw;
+    background-image: radial-gradient(#fffa, #0000 70%);
+}
+
+.click-battery {
+    position: relative;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -94,11 +107,11 @@ body {
     .stats {
         font-size: 1.25em;
     }
-    .click-battery {
+    .clicking {
         width: 50%;
         margin-bottom: 20%;
     }
-    .click-battery:hover {
+    .clicking:hover {
         width: 52%;
     }
     .clicker {
