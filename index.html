@@ -12,7 +12,9 @@
         />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body
+        onload="getValuesFromLocalStorage(); setInterval(passiveIncome, 1000);"
+    >
         <div class="header">
             <h1>Battery Clicker</h1>
         </div>
@@ -32,7 +34,21 @@
                 />
             </div>
         </div>
-        <div class="upgrades"></div>
-        <script src="/main.js"></script>
+        <div class="upgrades">
+            <div
+                class="upgrade"
+                id="current"
+                type="button"
+                onclick="current.buy()"
+            >
+                <span class="upgrade-name">Current</span>
+                <span class="upgrade-price">1</span>
+                <span class="upgrade-description"
+                    >Upgrade current to increase productivity by</span
+                >
+                <span class="upgrade-value">1 battery per click</span>
+            </div>
+        </div>
+        <script src="/clicker.js"></script>
     </body>
 </html>
