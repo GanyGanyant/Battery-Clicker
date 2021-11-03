@@ -12,9 +12,7 @@
         />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body
-        onload="getValuesFromLocalStorage(); setInterval(passiveIncome, 1000);"
-    >
+    <body onload="loadValues(); setInterval(passiveIncome, 1000);">
         <div class="header">
             <h1>Battery Clicker</h1>
         </div>
@@ -42,10 +40,11 @@
                 onclick="current.buy()"
             >
                 <span class="upgrade-name">Current</span>
-                <span class="upgrade-price">50</span>
+                <span class="upgrade-price">50</span> <br />
                 <span class="upgrade-description"
-                    >Upgrade current to increase productivity by</span
+                    >Upgrade current to increase productivity by:</span
                 >
+                <br />
                 <span class="upgrade-value">1 battery per click</span>
             </div>
             <div
@@ -55,10 +54,11 @@
                 onclick="voltage.buy()"
             >
                 <span class="upgrade-name">Voltage</span>
-                <span class="upgrade-price">100</span>
+                <span class="upgrade-price">100</span> <br />
                 <span class="upgrade-description"
-                    >Upgrade voltage to increase productivity by</span
+                    >Upgrade voltage to increase productivity by:</span
                 >
+                <br />
                 <span class="upgrade-value">2 batteries per click</span>
             </div>
         </div>
@@ -70,9 +70,9 @@
                 onclick="electricEel.buy()"
             >
                 <span class="passive-name">Electric eel</span>
-                <span class="passive-price">50</span>
+                <span class="passive-price">50</span> <br />
                 <span class="passive-description"
-                    >Upgrade Electric eel to increase passive income by</span
+                    >Upgrade Electric eel to increase passive income by:</span
                 >
                 <span class="passive-value">1 battery per second</span>
             </div>

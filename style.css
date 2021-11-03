@@ -109,6 +109,68 @@ body {
     width: 100%;
 }
 
+.upgrade {
+    display: block;
+    width: 25%;
+    height: 10vh;
+    background-color: gray;
+    border: 5px solid #444;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.upgrade-name {
+    font-size: 1.5em;
+}
+
+.upgrade-price {
+    float: right;
+    font-size: 1.5em;
+}
+
+.upgrade-description {
+    font-size: 1em;
+}
+
+.upgrade-value {
+    font-size: 1em;
+}
+
+.passive {
+    display: block;
+    width: 25%;
+    height: 10vh;
+    background-color: gray;
+    border: 5px solid #444;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.passive-name {
+    font-size: 1.5em;
+}
+
+.passive-price {
+    float: right;
+    font-size: 1.5em;
+}
+
+.passive-description {
+    font-size: 1em;
+}
+
+.passive-value {
+    font-size: 1em;
+}
+
+.canBuy {
+    border-color: green;
+}
+
+.cannotBuy {
+    border-color: darkred;
+}
+
 @media (max-width: 768px) {
     .header {
         font-size: 1em;
@@ -128,3 +190,10 @@ body {
         height: min-content;
     }
 }
+
+/*
+TODO: 
+-upgrades on left and passives on right
+-on mobile both under the clicker but still left and right
+-improve looks
+*/
