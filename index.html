@@ -16,65 +16,68 @@
         <div class="header">
             <h1>Battery Clicker</h1>
         </div>
-        <div class="clicker">
-            <div class="stats">
-                <span id="Batteries">0</span><span> batteries</span><br />
-                <span id="bps" , class="bps">0</span
-                ><span class="bps"> batteries per second</span>
+        <div class="wrapper">
+            <div class="clicker">
+                <div class="stats">
+                    <span id="Batteries">0</span><span> batteries</span><br />
+                    <span id="bps" , class="bps">0</span
+                    ><span class="bps"> batteries per second</span>
+                </div>
+                <div class="clicking">
+                    <img
+                        src="resources/DN Battery.png"
+                        alt="Clickable battery"
+                        class="click-battery"
+                        type="button"
+                        onclick="clicking()"
+                    />
+                </div>
             </div>
-            <div class="clicking">
-                <img
-                    src="resources/DN Battery.png"
-                    alt="Clickable battery"
-                    class="click-battery"
+            <div class="upgrades">
+                <div
+                    class="upgrade"
+                    id="current"
                     type="button"
-                    onclick="clicking()"
-                />
-            </div>
-        </div>
-        <div class="upgrades">
-            <div
-                class="upgrade"
-                id="current"
-                type="button"
-                onclick="current.buy()"
-            >
-                <span class="upgrade-name">Current</span>
-                <span class="upgrade-price">50</span> <br />
-                <span class="upgrade-description"
-                    >Upgrade current to increase productivity by:</span
+                    onclick="current.buy()"
                 >
-                <br />
-                <span class="upgrade-value">1 battery per click</span>
-            </div>
-            <div
-                class="upgrade"
-                id="voltage"
-                type="button"
-                onclick="voltage.buy()"
-            >
-                <span class="upgrade-name">Voltage</span>
-                <span class="upgrade-price">100</span> <br />
-                <span class="upgrade-description"
-                    >Upgrade voltage to increase productivity by:</span
+                    <span class="upgrade-name">Current</span>
+                    <span class="upgrade-price">50</span> <br />
+                    <span class="upgrade-description"
+                        >Upgrade current to increase productivity by:</span
+                    >
+                    <br />
+                    <span class="upgrade-value">1 battery per click</span>
+                </div>
+                <div
+                    class="upgrade"
+                    id="voltage"
+                    type="button"
+                    onclick="voltage.buy()"
                 >
-                <br />
-                <span class="upgrade-value">2 batteries per click</span>
+                    <span class="upgrade-name">Voltage</span>
+                    <span class="upgrade-price">100</span> <br />
+                    <span class="upgrade-description"
+                        >Upgrade voltage to increase productivity by:</span
+                    >
+                    <br />
+                    <span class="upgrade-value">2 batteries per click</span>
+                </div>
             </div>
-        </div>
-        <div class="passives">
-            <div
-                class="passive"
-                id="electricEel"
-                type="button"
-                onclick="electricEel.buy()"
-            >
-                <span class="passive-name">Electric eel</span>
-                <span class="passive-price">50</span> <br />
-                <span class="passive-description"
-                    >Upgrade Electric eel to increase passive income by:</span
+            <div class="passives">
+                <div
+                    class="passive"
+                    id="electricEel"
+                    type="button"
+                    onclick="electricEel.buy()"
                 >
-                <span class="passive-value">1 battery per second</span>
+                    <span class="passive-name">Electric eel</span>
+                    <span class="passive-price">50</span> <br />
+                    <span class="passive-description"
+                        >Upgrade Electric eel to increase passive income
+                        by:</span
+                    >
+                    <span class="passive-value">1 battery per second</span>
+                </div>
             </div>
         </div>
         <script src="/clicker.js"></script>

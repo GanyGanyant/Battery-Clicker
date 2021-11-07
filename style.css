@@ -111,12 +111,12 @@ body {
 
 .upgrade {
     display: block;
-    width: 25%;
+    width: 25vw;
     height: 10vh;
     background-color: gray;
     border: 5px solid #444;
     border-radius: 10px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .upgrade-name {
@@ -138,7 +138,7 @@ body {
 
 .passive {
     display: block;
-    width: 25%;
+    width: 25vw;
     height: 10vh;
     background-color: gray;
     border: 5px solid #444;
@@ -171,6 +171,21 @@ body {
     border-color: darkred;
 }
 
+@media (min-width: 769px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .wrapper .upgrades {
+        order: 1;
+    }
+    .wrapper .clicker {
+        order: 2;
+    }
+    .wrapper .passives {
+        order: 3;
+    }
+}
 @media (max-width: 768px) {
     .header {
         font-size: 1em;
@@ -180,7 +195,7 @@ body {
     }
     .clicking {
         width: 50%;
-        margin-bottom: 20%;
+        padding-bottom: 20%;
     }
     .clicking:hover {
         width: 52%;
@@ -189,11 +204,28 @@ body {
         width: 100%;
         height: min-content;
     }
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+    }
+    .wrapper .clicker {
+        order: 1;
+    }
+    .wrapper .upgrades {
+        order: 2;
+    }
+    .wrapper .passives {
+        order: 3;
+    }
+    .upgrade,
+    .passive {
+        width: 100%;
+        border-radius: 0;
+    }
+    .upgrades,
+    .passives {
+        display: inline-block;
+        width: 50%;
+    }
 }
-
-/*
-TODO: 
--upgrades on left and passives on right
--on mobile both under the clicker but still left and right
--improve looks
-*/

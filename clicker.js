@@ -165,4 +165,3 @@ function statReset() {
   });
   updateStats();
 }
-
