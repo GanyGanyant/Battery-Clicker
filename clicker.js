@@ -23,6 +23,7 @@ function loadValues() {
     element.loadValues();
   });
   updateStats();
+  console.log("please don't cheat");
 }
 
 function updateStats() {
@@ -101,8 +102,12 @@ class upgrade {
 
 }
 
-let current = new upgrade("current", 50, 50, 1 );
-let voltage = new upgrade("voltage", 100, 100, 2 );
+let current = new upgrade("current", 50, 25, 1 );
+let voltage = new upgrade("voltage", 100, 50, 2 );
+let resistance = new upgrade("resistance", 200, 100, 3 );
+let capacitance  = new upgrade("capacitance", 500, 200, 5 );
+let parallelCircuit = new upgrade("parallelCircuit", 1000, 300, 10 );
+let seriesCircuit = new upgrade("seriesCircuit", 1500, 350, 15 );
 
   let passives = [];
 
@@ -151,7 +156,12 @@ class passive {
 
 }
 
-let electricEel = new passive("electricEel", 50, 50, 1);
+let electricEel = new passive("electricEel", 50, 5, 1);
+let potato = new passive("potato", 150, 20, 3);
+let appleCharger = new passive("appleCharger", 300, 50, 5);
+let powerOutlet = new passive("powerOutlet", 700, 100, 10);
+let dieselGenerator = new passive("dieselGenerator", 1500, 200, 20);
+let solarPanel = new passive("solarPanel", 2000, 250, 25);
 
 function statReset() {
   batteries = 0;
@@ -165,3 +175,4 @@ function statReset() {
   });
   updateStats();
 }
+

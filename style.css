@@ -15,6 +15,7 @@
 
         --foreground: var(--clr-dark);
         --background: var(--clr-light);
+        --butFore: #ccc;
     }
 }
 
@@ -29,6 +30,7 @@
 
         --foreground: var(--clr-light);
         --background: var(--clr-dark);
+        --butFore: #aaa;
     }
 }
 
@@ -109,16 +111,6 @@ body {
     width: 100%;
 }
 
-.upgrade {
-    display: block;
-    width: 25vw;
-    height: 10vh;
-    background-color: gray;
-    border: 5px solid #444;
-    border-radius: 10px;
-    /* margin-bottom: 5px; */
-}
-
 .upgrade-name {
     font-size: 1.5em;
 }
@@ -135,15 +127,15 @@ body {
 .upgrade-value {
     font-size: 1em;
 }
-
+.upgrade,
 .passive {
     display: block;
     width: 25vw;
-    height: 10vh;
-    background-color: gray;
+    min-height: 10vh;
+    background-color: var(--butFore);
     border: 5px solid #444;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .passive-name {
@@ -164,11 +156,11 @@ body {
 }
 
 .canBuy {
-    border-color: green;
+    border-color: rgb(0, 175, 0);
 }
 
 .cannotBuy {
-    border-color: darkred;
+    border-color: rgb(200, 0, 0);
 }
 
 @media (min-width: 769px) {
@@ -222,6 +214,8 @@ body {
     .passive {
         width: 100%;
         border-radius: 0;
+        margin-bottom: 0;
+        height: fit-content;
     }
     .upgrades,
     .passives {
